@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Booker</title>
+  </head>
+  <body>
+    <div class="search-container">
+        <input id="searchInput" class="search-input"/>
+    </div>
+    <div id="favoritesContainer" class="favorites-container"></div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <label id="titleLabel" for="titleInput"></label>
+        <input id="titleInput" type="text"/>
+        <label id="urlLabel" for="urlInput"></label>
+        <input id="urlInput" type="url"/>
+        <div class="btn-container">
+          <button id="deleteBtn"></button>
+          <button id="saveBtn"></button>
+          <button id="closeBtn"></button>  
+        </div>
+      </div>
+    </div>
+    <script src="./newtab.js" type="module"></script>
+  </body>
+</html>

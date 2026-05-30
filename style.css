@@ -1,0 +1,206 @@
+:root {
+    --text-color: #7c7f81;
+    --background-color: #f1f3f4;
+    --search-bar-bg-color: #dfe3e5;
+    --hover-color:#edeff0;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #f1f3f4;
+        --background-color: #181818;
+        --search-bar-bg-color: #2a2a2a;
+        --hover-color:#373737;
+    }
+
+    .clear img {
+        content: url('images/icons8-backspace-64-white.png');
+    }
+
+}
+
+@media (prefers-color-scheme: light) {
+
+    .clear img {
+        content: url('images/icons8-backspace-64-black.png');
+    }
+
+}
+
+@font-face { 
+    font-family: opensans; 
+    src: url('../OpenSans-Regular.ttf') 
+}
+
+html {
+    font-family: opensans;
+}
+
+
+body {
+    background-color: var(--background-color);
+    padding: 20px;
+}
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    height: auto;
+    width: auto;
+}
+
+.favorites-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3vw;
+    margin-top: 20px;
+}
+
+.favorites-item {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.favorites-item img {
+    width: 75px;
+    height: 75px;
+    border-radius: 10%;
+}
+
+.favorites-item span {
+    white-space: nowrap; 
+    width: 150px; 
+    max-width: 150px; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.search-container {
+    display: flex;
+}
+
+.search-input {
+    width: 100%;
+    height: 15px;
+    border-radius: 12px;
+    border: none;
+    background-color: var(--search-bar-bg-color);
+    color: var(--text-color);
+    padding: 12px 20px 12px 40px;
+    background-image: url('images/icons8-search-21.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    animation:fadein .2s;
+}
+
+.fadeout {
+    animation: fadeout .2s;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    border-radius: 12px;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 40%; /* Could be more or less, depending on screen size */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal label {
+    font-size: 1.5em;
+}
+
+.modal-content input[type="text"], .modal-content input[type="url"] {
+    height: 15px;
+    border-radius: 12px;
+    border: none;
+    background-color: var(--search-bar-bg-color);
+    color: var(--text-color);
+    padding: 12px 20px 12px 40px;
+}
+
+.modal-content button {
+    background-color: var(--search-bar-bg-color);
+    color: var(--text-color);
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+}
+
+.modal-content button:hover, input[type="text"]:hover, input[type="text"]:focus, input[type="url"]:hover, input[type="url"]:focus, #search-bar-input:hover, #search-bar-input:focus  {
+    background-color: var(--hover-color);   
+}
+
+.btn-container {
+    margin-top: 23px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+
+@keyframes fadein {
+	from {
+		opacity:0;
+	}
+	to {
+		opacity:1;
+	}
+}
+
+@keyframes fadeout {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+
+@keyframes fade-to-left {
+    from {
+      opacity: 0;
+      transform: 100%;
+    }
+    
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  
+  
+.favorites-item {
+    animation-name: fade-to-left;
+    animation-duration: 200ms;
+}

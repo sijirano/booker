@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "__MSG_extension_name__",
+    "description": "__MSG_extension_desc__",
+    "version": "1.2",
+    "default_locale" : "en",
+    "icons": {
+      "64": "images/icons8-star-64.png"
+    },
+    "chrome_url_overrides" : {
+      "newtab": "newtab.html"
+    },
+    "permissions": [
+      "bookmarks",
+      "storage",
+      "unlimitedStorage"
+    ],
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "",
+        "strict_min_version": "58.0"
+      }
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions": [
+      "*://t0.gstatic.com/*"
+    ]
+}
