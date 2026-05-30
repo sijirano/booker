@@ -1,0 +1,29 @@
+{
+    "extension_name": {
+        "message": "Booker - Bookmarks in New Tab"
+    },
+    "extension_desc": {
+        "message": "Shows your bookmarks in the New Tab page. Icons by Icons8."
+    },
+    "search_placeholder": {
+        "message": "Search"
+    },
+    "search_clean": {
+        "message": "Clean search"
+    },
+    "edit_title": {
+        "message": "Title"
+    },
+    "edit_url": {
+        "message": "URL"
+    },
+    "edit_save": {
+        "message": "Save"
+    },
+    "edit_delete": {
+        "message": "Delete"
+    },
+    "edit_close": {
+        "message": "Close"
+    }
+}
