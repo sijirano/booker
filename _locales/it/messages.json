@@ -1,0 +1,29 @@
+{
+  "extension_name": {
+      "message": "Booker - Preferiti in Nuova Pagina"
+  },
+  "extension_desc": {
+      "message": "Accedi ai tuoi preferiti direttamente nella Nuova Pagina. Icone fornite da Icons8."
+  },
+  "search_placeholder": {
+      "message": "Cerca"
+  },
+  "search_clean": {
+      "message": "Pulisci ricerca"
+  },
+  "edit_title": {
+      "message": "Titolo"
+  },
+  "edit_url": {
+      "message": "URL"
+  },
+  "edit_save": {
+      "message": "Salva"
+  },
+  "edit_delete": {
+      "message": "Elimina"
+  },
+  "edit_close": {
+      "message": "Chiudi"
+  }
+}
